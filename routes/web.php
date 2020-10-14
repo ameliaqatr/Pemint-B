@@ -24,3 +24,6 @@ $router->get('/biodata', function (){
 $router->get('hai/{name}', function($name){
     return 'Hai, '. $name;
 });
+
+$router->get('/products', 'ProductController@index');
+$router->get('/products/{id}', 'ProductController@show');
