@@ -32,3 +32,8 @@ $router->post('/products', 'ProductController@store');
 
 $router->delete('/products/{id}', 'ProductController@destroy');
 
+$router->put('/products/{id}', 'ProductController@update');
+
+
+
+

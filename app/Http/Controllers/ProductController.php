@@ -66,4 +66,24 @@ class ProductController extends Controller
 			], 404);
 		}
 	}
+
+		public function update(Request $request, $id)
+		{
+			$product = Product::whereid($id)->update([
+				'name' => $request->name,
+				'price' => $request->price,
+				'rating' => $request->rating,
+				'quantity' => $request->quantity
+			]);
+			if($product){
+				return response()->json([
+					'message' => 'Produk berhasil diupdate',
+					'data' => $id
+				], 200);
+			} else {
+				return response()->json([
+					'message' => 'Produk gagal diupdate'
+				], 404);
+			}
+		}
 }
