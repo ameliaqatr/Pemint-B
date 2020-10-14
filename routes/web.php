@@ -20,3 +20,7 @@ $router->get('/', function () use ($router) {
 $router->get('/biodata', function (){
     return 'Nama: Amelia Qatrunnada, NIM: 185150701111014';
 });
+
+$router->get('hai/{name}', function($name){
+    return 'Hai, '. $name;
+});
