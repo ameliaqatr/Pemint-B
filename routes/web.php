@@ -25,13 +25,17 @@ $router->get('hai/{name}', function($name){
     return 'Hai, '. $name;
 });
 
+//read data
 $router->get('/products', 'ProductController@index');
 $router->get('/products/{id}', 'ProductController@show');
 
+//create data
 $router->post('/products', 'ProductController@store');
 
+//delete data
 $router->delete('/products/{id}', 'ProductController@destroy');
 
+//update data
 $router->put('/products/{id}', 'ProductController@update');
 
 
